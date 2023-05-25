@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Merge & Split</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.17/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-8">
+        <h1 class="text-3xl font-bold mb-4">PDF Merge & Split</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-white rounded-lg p-6 shadow-md">
+                <h2 class="text-xl font-bold mb-2">Merge PDF</h2>
+                <form action="/merge" method="post" enctype="multipart/form-data">
+                    <input type="file" name="pdf_files" multiple class="mb-2">
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Merge</button>
+                </form>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 shadow-md">
+                <h2 class="text-xl font-bold mb-2">Split PDF</h2>
+                <form action="/split" method="post" enctype="multipart/form-data">
+                    <input type="file" name="pdf_file" class="mb-2">
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Split</button>
+                </form>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 shadow-md">
+                <h2 class="text-xl font-bold mb-2">Compress PDF</h2>
+                <form action="/compress" method="post" enctype="multipart/form-data">
+                    <input type="file" name="pdf_file" class="mb-2">
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Compress</button>
+                </form>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 shadow-md">
+                <h2 class="text-xl font-bold mb-2">JPG to PDF</h2>
+                <form action="/jpg_to_pdf" method="post" enctype="multipart/form-data">
+                    <input type="file" name="pdf_file" class="mb-2">
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Compress</button>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
